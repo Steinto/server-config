@@ -10,6 +10,7 @@
     ../../modules/docker
     ../../modules/syncthing.nix
     ../../modules/jellyseer.nix
+    ../../modules/nixarr.nix
     inputs.nixarr.nixosModules.default
   ];
 
