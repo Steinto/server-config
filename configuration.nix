@@ -1,14 +1,15 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -52,7 +53,7 @@
   users.users."user" = {
     isNormalUser = true;
     description = "User";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
     openssh.authorizedKeys.keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDX/w0E9gal4O16DKC+NfTKObqx9cwjLXkH5vctPOPdQpuwmezbJ233HfhhQQ8a0ZdTbS15LgitIENRAarnhaWo7/WbVpJHUEC3fTOyxbETf+vEuhzO3jqcbKYhtSwhpBlvi5bos9EAHa/UL1nTrqFZM2Etoen7DuTU5MmEwUSCaaFv/GVLDvMZ8FGOFZx8u9Ihp/K53wMTjYTIftvThg+9drfRgzV+DK4U7rQYkQ8Kt6IBNlgKqdutjb0JEd+TQ1wuVFsgtgfytuZ50TYo8By+KoEdnOtkauyF1dltaWzsxibTRmF0n7YZN9BV4gH3aOY8FE7wl6wvGvYkDN6QLLspY8FDHVMwUyRn731J7DFZhUlrE5Mxt8S28b3UC852fA82un1dfP4nVwn1ILWZQOLP5zcn5/XQ2kEeL/p5VmVU0hAlRHz2FHTCtGGOOSnb0DJ2oD8WzWeKhMlCNoTSsh4Z9xY0kST9Z+g8mSp4cwPM+Koghzdi+ypJqBr1Lwn3Hs8= tobys@TobysPc"];
   };
@@ -63,9 +64,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-     git
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -77,12 +78,12 @@
   # };
 
   services.openssh = {
-  enable = true;
-  # require public key authentication for better security
-  settings.PasswordAuthentication = false;
-  settings.KbdInteractiveAuthentication = false;
-  #settings.PermitRootLogin = "yes";
-};
+    enable = true;
+    # require public key authentication for better security
+    settings.PasswordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
+    #settings.PermitRootLogin = "yes";
+  };
 
   # List services that you want to enable:
 
@@ -102,5 +103,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
