@@ -12,12 +12,12 @@ nixarr = {
     mediaDir = "/data/media";
     stateDir = "/data/media/.state/nixarr";
 
-    vpn = {
-      enable = true;
-      # WARNING: This file must _not_ be in the config git directory
-      # You can usually get this wireguard file from your VPN provider
-      wgConf = "/data/.secret/wg.conf";
-    };
+    # vpn = {
+    #   enable = true;
+    #   # WARNING: This file must _not_ be in the config git directory
+    #   # You can usually get this wireguard file from your VPN provider
+    #   wgConf = "/data/.secret/wg.conf";
+    # };
 
     jellyfin = {
       enable = true;
@@ -27,7 +27,7 @@ nixarr = {
 
     transmission = {
       enable = true;
-      vpn.enable = true;
+    #   vpn.enable = true;
       peerPort = 50000; # Set this to the port forwarded by your VPN
     };
 
