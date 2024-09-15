@@ -6,6 +6,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/docker
   ];
 
   # Bootloader.
@@ -19,6 +20,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  # Enabling flakes and nix command experimantal features
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
