@@ -5,5 +5,7 @@
 }: {
     imports = [
         ./adguard-home.nix
+        ./flaresolver.nix
+        ./homarr.nix
     ];
 }

@@ -8,6 +8,8 @@
     ./hardware-configuration.nix
     ../../modules/docker
     ../../modules/syncthing.nix
+    ../../modules/jellyseer.nix
+    inputs.nixarr.nixosModules.default
   ];
 
   # Bootloader.
