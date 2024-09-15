@@ -54,7 +54,7 @@
     description = "User";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
-    openssh.authorizedKeys.keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDX/w0E9gal4O16DKC+NfTKObqx9cwjLXkH5vctPOPdQpuwmezbJ233HfhhQQ8a0ZdTbS15LgitIENRAarnhaWo7/WbVpJHUEC3fTOyxbETf+vEuhzO3jqcbKYhtSwhpBlvi5bos9EAHa/UL1nTrqFZM2Etoen7DuTU5MmEwUSCaaFv/GVLDvMZ8FGOFZx8u9Ihp/K53wMTjYTIftvThg+9drfRgzV+DK4U7rQYkQ8Kt6IBNlgKqdutjb0JEd+TQ1wuVFsgtgfytuZ50TYo8By+KoEdnOtkauyF1dltaWzsxibTRmF0n7YZN9BV4gH3aOY8FE7wl6wvGvYkDN6QLLspY8FDHVMwUyRn731J7DFZhUlrE5Mxt8S28b3UC852fA82un1dfP4nVwn1ILWZQOLP5zcn5/XQ2kEeL/p5VmVU0hAlRHz2FHTCtGGOOSnb0DJ2oD8WzWeKhMlCNoTSsh4Z9xY0kST9Z+g8mSp4cwPM+Koghzdi+ypJqBr1Lwn3Hs8= tobys@TobysPc"
+    openssh.authorizedKeys.keys = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDX/w0E9gal4O16DKC+NfTKObqx9cwjLXkH5vctPOPdQpuwmezbJ233HfhhQQ8a0ZdTbS15LgitIENRAarnhaWo7/WbVpJHUEC3fTOyxbETf+vEuhzO3jqcbKYhtSwhpBlvi5bos9EAHa/UL1nTrqFZM2Etoen7DuTU5MmEwUSCaaFv/GVLDvMZ8FGOFZx8u9Ihp/K53wMTjYTIftvThg+9drfRgzV+DK4U7rQYkQ8Kt6IBNlgKqdutjb0JEd+TQ1wuVFsgtgfytuZ50TYo8By+KoEdnOtkauyF1dltaWzsxibTRmF0n7YZN9BV4gH3aOY8FE7wl6wvGvYkDN6QLLspY8FDHVMwUyRn731J7DFZhUlrE5Mxt8S28b3UC852fA82un1dfP4nVwn1ILWZQOLP5zcn5/XQ2kEeL/p5VmVU0hAlRHz2FHTCtGGOOSnb0DJ2oD8WzWeKhMlCNoTSsh4Z9xY0kST9Z+g8mSp4cwPM+Koghzdi+ypJqBr1Lwn3Hs8= tobys@TobysPc";
   };
 
   # Allow unfree packages
@@ -83,6 +83,7 @@
   settings.KbdInteractiveAuthentication = false;
   #settings.PermitRootLogin = "yes";
 };
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
